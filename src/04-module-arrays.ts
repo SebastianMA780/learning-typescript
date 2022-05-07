@@ -11,7 +11,8 @@
 	let array1: Array<number> = [];
 	let array2: string[] = [];
 	let array3: (boolean)[] = [];
-	//all this types are equal to type an array explicit
+	//all this types are equal to type an array explicitly.
+	
 	array1.push(1) // only numbers are allowed
 	array2.push('str') // only strings are allowed
 	array3.push(false) // only booleans are allowed
