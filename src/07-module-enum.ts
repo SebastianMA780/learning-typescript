@@ -2,19 +2,19 @@
 //if a property has not asigne value its value will be a number
 // E.X: first property with not asigne value has 0 as value , second one has 1 and so on.
 
-enum ROLES {
+export enum ROLES {
 	ADMIN = 'admin',
 	SELLER = 'seller',
 	CUSTOMER = 'customer',
 }
 
-type User = { 
+export type User = { 
 	userName: string;
 	role: ROLES;
 	//Enums can used like types and forces your code to use its properties.
 }
 
-const newUser: User = {
+export const newUser: User = {
 	userName: 'testUser',
 	//role: 'admin', throw error because of you should asigne the value direct from ROLES enum, 
 	//this makes your code more consistent
