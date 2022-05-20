@@ -1,4 +1,7 @@
-/* Utility types allows to us transform types/interfaces */
+/* 
+	Utility types allows to us transform types/interfaces 
+	https://www.typescriptlang.org/docs/handbook/utility-types.html
+*/
 
 /* Omit */ 
 //constructs a type by removing properties from a type/interface
@@ -57,3 +60,33 @@ export const productDetailType: ProductBaseDataType = {
 	price: 20032,
 	condition: 'NEW'
 }
+
+/* Partial */
+//Set all properties of a type to optional --> property?: string
+type ShoeType = {
+	name: string;
+	size: string;
+}
+interface Shoe {
+	name: string;
+	size: string;
+}
+
+type ShoePartial = Partial<ShoeType>;
+
+export const shoe1: Partial<Shoe> = {};
+export const shoe: ShoePartial = {}
+
+/* Required  */
+//All properties to required
+interface Foot {
+	color?: string
+	size?: string;
+}
+
+export const foot: Foot = {}
+export const foot1: Required<Foot> = {
+	color: 'white',
+	size: '2ft'
+} // now properties are mandatory.
+
