@@ -2,6 +2,16 @@
 //if a property has not asigne value its value will be a number
 // E.X: first property with not asigne value has 0 as value , second one has 1 and so on.
 
+enum ROLES_NUMBERS {
+	FIRST_ROLE,
+	SECOND_ROLE,
+	THIRD_ROLE,
+}
+
+ console.log(ROLES_NUMBERS.FIRST_ROLE) // = 0
+ console.log(ROLES_NUMBERS.SECOND_ROLE) // = 1
+ console.log(ROLES_NUMBERS.THIRD_ROLE) // = 2
+
 export enum ROLES {
 	ADMIN = 'admin',
 	SELLER = 'seller',
