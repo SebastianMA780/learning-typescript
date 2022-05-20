@@ -90,3 +90,18 @@ export const foot1: Required<Foot> = {
 	size: '2ft'
 } // now properties are mandatory.
 
+/* Readonly */
+//Make all properties readonly that is, they cant be reassigned
+interface Computer {
+	brand: string;
+	ram: string;
+}
+
+const newComputer: Readonly<Computer> = {
+	brand: 'Mac',
+	ram: '16gb',
+}
+//newComputer.brand = 'windows' // Error: brand cant be reassigned because of it is readonly property
+console.log({
+	newComputer
+})
