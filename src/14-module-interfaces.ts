@@ -44,7 +44,7 @@ interface User {
 	userName: string
 	userId: string | number
 }
-export const userIds: User['userId'] = '134nadJS';
+export const userIds: User['userId'] = '134nadJS'; //only way to do the same that types.
 
 //2.
 interface Animal {
