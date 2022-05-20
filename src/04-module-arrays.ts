@@ -21,3 +21,10 @@ let combinedArray: Array<number | string> = [];
 combinedArray.push('1');
 combinedArray.push(2);
 //combinedArray.map( item => item + item) //not allowed because ts detect that type could have 2 types of values
+
+//ReadonlyArray
+ let fixedArray: ReadonlyArray<string> = ['chart'];
+// fixedArray.push(); //not allowed because now the array can be modified;
+// fixedArray.pop();
+fixedArray.map( text => text + 'c'); //this is allowed because some array methods 
+//return a new array without modified the old one.
