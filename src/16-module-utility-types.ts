@@ -105,3 +105,16 @@ const newComputer: Readonly<Computer> = {
 console.log({
 	newComputer
 })
+
+/* Parameters */
+ //constructs a tuple type from the types used in a fn.
+
+ type FnTYpe = Parameters<(val1:  number, val2: Array<string>) => string>;
+
+ export const fnType: FnTYpe = [1, ['2', '3']];
+
+ /* ReturnType */
+ //constructs a type based on fn return type
+
+ type TypeReturned = ReturnType<() => string[]>;
+ export const arrayTyped: TypeReturned = ['1', '2'];
