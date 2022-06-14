@@ -1,7 +1,4 @@
-/*  
-	An interface is a way to name an object type ,
-	it is very similar to types although there are some differences. 
-*/
+/*  An interface is a way to name an object type. */
 
 export interface Person {
 	name: string;
@@ -15,12 +12,9 @@ export const person: Person = {
 	profession: 'Software engineer',
 }
 
-/* 
-	Interfaces vs Types
-	1. interfaces are completely oriented to describe objects, a type can describe a primitive variable
-	2. Interfaces could be extends although types can achieve the same in a different way.
-	3. interfaces can be changed after being created, types doesn't
-*/
+/* type alias is a name for any type */
+
+type TypeId = string | number;
 
 export type PersonType = {
 	name: string;
@@ -34,6 +28,15 @@ export const otherPeson: PersonType = {
 	profession: 'Software engineer',
 }
 
+export const userIdTyped: TypeId = '38374jn' || 1;
+
+
+/* 
+	Interfaces vs Types
+	1. interfaces are completely oriented to describe objects, a type can describe a primitive variable
+	2. Interfaces can be extends although types can achieve the same in a different way.
+	3. interfaces can be changed after being created, types doesn't
+*/
 
 //1.
 
@@ -46,7 +49,9 @@ interface User {
 }
 export const userIds: User['userId'] = '134nadJS'; //only way to do the same that types.
 
+
 //2.
+
 interface Animal {
 	class: string;
 }
@@ -57,7 +62,9 @@ export const lion: Lion = {
 	class: 'mammal',
 	category: 'carnivorous',
 }
+
 /* -- */
+
 type AnimalType = {
 	class: string;
 }
@@ -70,6 +77,7 @@ export const lionType: LionType = {
 }
 
 //3.
+
 interface Student {
 	name: string;
 }
@@ -80,10 +88,12 @@ export const student: Student = {
  name: 'exe'	,
  age: 27
 }
+
 /* -- */
+
 type StudentType = {
 	name: string;
 }
-// interface StudentType { //Error: duplicate identifier.
+// type StudentType = { //Error: duplicate identifier.
 // 	age: number;
 // }
