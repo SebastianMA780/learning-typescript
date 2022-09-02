@@ -1,0 +1,1 @@
+//pending https://www.typescriptlang.org/docs/handbook/2/keyof-types.html
