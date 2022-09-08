@@ -107,7 +107,7 @@ console.log({
 })
 
 /* Parameters */
- //constructs a tuple type from the types used in a fn.
+//constructs a tuple type from the types used in a fn.
 
  type FnTYpe = Parameters<(val1:  number, val2: Array<string>) => string>;
 
@@ -118,3 +118,16 @@ console.log({
 
  type TypeReturned = ReturnType<() => string[]>;
  export const arrayTyped: TypeReturned = ['1', '2'];
+
+ /* Awaited */
+ // gets the type of a return promise
+
+ async function awaitedForType() {
+	return {
+		id: '',
+		userName: ''
+	}
+ }
+
+ export type asyncFnReturnType =  Awaited<ReturnType<typeof awaitedForType>>;
+ //this way you can access to the return type of promise.
