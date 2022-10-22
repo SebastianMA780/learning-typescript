@@ -11,7 +11,7 @@
 		})
 	}
 
-	argFn2('arg1', 'arg2', 'arg3');
+	argFn2('arg1', 'arg2', 'arg3',);
 
 	//argFn2(1, {}, true);
 	/* this throw error because we explicit tell to ts that we will send n parameters
