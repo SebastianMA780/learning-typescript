@@ -2,7 +2,7 @@ class MyDate {
 
 	private year: number; // by adding private properties cannot be accessed outside the class
 	private month: number; 
-	private day: number;
+	#day: number; // ECMA FEATURE, it is javasCript code to make it truly private 
 
 	constructor({
 		year,
@@ -15,11 +15,11 @@ class MyDate {
 	}) {
 		this.year = year;
 		this.month = month
-		this.day = day;
+		this.#day = day;
 	}
 
 	public printFormat(): string {
-		return `${this.day}/${this.month}/${this.year}`;
+		return `${this.#day}/${this.month}/${this.year}`;
 	}
 
 }

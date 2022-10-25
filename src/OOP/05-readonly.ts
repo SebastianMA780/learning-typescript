@@ -1,8 +1,8 @@
 class MyDate {
 
-	private readonly year: number; // readonly prevents assignments to the field outside of the constructor.
-	readonly month: number; 
 	readonly day: number;
+	readonly month: number; 
+	private readonly year: number; // readonly prevents assignments to the field outside of the constructor.
 
 	constructor({
 		year,
