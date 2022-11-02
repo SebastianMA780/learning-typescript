@@ -1,5 +1,12 @@
 /*  An interface is a way to name an object type. */
 
+/* 
+	Naming Convention:
+
+	types an interfaces should be written in UpperCamelCase.
+	interfaces does not have to have I prefix.
+*/
+
 export interface Person {
 	name: string;
 	age: number;
