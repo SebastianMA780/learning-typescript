@@ -3,6 +3,17 @@
 	https://www.typescriptlang.org/docs/handbook/2/generics.html
 */
 
+/* 	
+	GENERICS CONVENTION YOU MAY SEE
+		E - ELEMENT
+		K - KEY
+		N - NUMBER
+		V - VALUE
+		T - Type 
+	
+	shortcut vs long word.
+*/
+
 	function fnType<Type>(param: Type): Type {
 		return param; //this way we will know what return a function based on Type we pass.
 	}
@@ -39,7 +50,7 @@
 
 	loggingIdentity([1,2]);
 	loggingIdentity('works!!!');
-	loggingIdentity(1); // Error -> number does not hace length property
+	//loggingIdentity(1); // Error -> number does not hace length property
 
 //Type Parameters in Generic Constraints
 
@@ -50,4 +61,5 @@
 	let obj = { a: 1, b: 2, c: 3, d: 4 };
 	
 	getProperty(obj, "a");
-	getProperty(obj, "m"); // Error -> m is not a property of obj
+	//getProperty(obj, "m"); // Error -> m is not a property of obj
+
